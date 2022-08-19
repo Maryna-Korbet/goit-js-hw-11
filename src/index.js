@@ -2,6 +2,8 @@ import '../src/css/styles.css';
 import { fetchData } from './js/fetch-data';
 import { generateGallery } from './js/generateGallery';
 import Notiflix from 'notiflix';
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 const refs = {
     searchForm: document.querySelector('#search-form'),
@@ -34,6 +36,7 @@ function onSearchForm(e) {
                 return Notiflix.Notify.failure(`Sorry, there are no images matching your search query. Please try again.`);
             } else {
                 generateGallery(data.hits);
+                onSimpleLightbox();
                 Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
                 if (data.totalHits > perPage) {
                     refs.loadMoreBtn.style.display = 'block';
@@ -43,12 +46,12 @@ function onSearchForm(e) {
         .catch(error => console.log(error));
 }
 
-
 function onLoadMore() {
     page += 1;
     fetchData(textQuery, page, perPage)
         .then(({ data }) => {
             generateGallery(data.hits);
+            onSimpleLightbox();
             const totalPages = Math.ceil(data.totalHits / perPage);
             if (page > totalPages) {
                 refs.loadMoreBtn.style.display = 'none';
@@ -59,7 +62,9 @@ function onLoadMore() {
         .catch(error => console.log(error));
 }
 
-
+function onSimpleLightbox() {
+    new SimpleLightbox('.gallery a').refresh();
+}
 
 
 
