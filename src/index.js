@@ -54,7 +54,7 @@ function onLoadMore() {
             onSimpleLightbox();
             const totalPages = Math.ceil(data.totalHits / perPage);
             if (page > totalPages) {
-                refs.loadMoreBtn.style.display = 'none';
+                // refs.loadMoreBtn.style.display = 'none';
                 Notiflix.Notify.failure(`We're sorry, but you've reached the end of search results.`);
                 return;
             }
