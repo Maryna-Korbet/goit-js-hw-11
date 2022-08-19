@@ -37,7 +37,6 @@ function onSearchForm(e) {
             } else {
                 generateGallery(data.hits);
                 onSimpleLightbox();
-                smoothPageScrolling();
                 Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
                 if (data.totalHits > perPage) {
                     refs.loadMoreBtn.style.display = 'block';
@@ -53,7 +52,6 @@ function onLoadMore() {
         .then(({ data }) => {
             generateGallery(data.hits);
             onSimpleLightbox();
-            smoothPageScrolling();
             const totalPages = Math.ceil(data.totalHits / perPage);
             if (page > totalPages) {
                 refs.loadMoreBtn.style.display = 'none';
