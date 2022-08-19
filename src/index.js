@@ -34,6 +34,7 @@ function onSearchForm(e) {
                 return Notiflix.Notify.failure(`Sorry, there are no images matching your search query. Please try again.`);
             } else {
                 generateGallery(data.hits);
+                Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
                 if (data.totalHits > perPage) {
                     refs.loadMoreBtn.style.display = 'block';
                 }
@@ -51,7 +52,8 @@ function onLoadMore() {
             const totalPages = Math.ceil(data.totalHits / perPage);
             if (page > totalPages) {
                 refs.loadMoreBtn.style.display = 'none';
-                return Notiflix.Notify.failure(`We're sorry, but you've reached the end of search results.`);
+                Notiflix.Notify.failure(`We're sorry, but you've reached the end of search results.`);
+                return;
             }
         })
         .catch(error => console.log(error));
