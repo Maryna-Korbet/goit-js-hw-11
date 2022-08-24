@@ -1,13 +1,102 @@
-body {
+.container {
+  min-width: 320px;
+  width: 100vw;
+  /* padding-left: 32px;
+  padding-right: 32px; */
+  margin: 0 auto;
+  overflow-x: none;
+}
+
+/* 0px - 319px mobile */
+@media screen and (max-width: 319px) {
+  .container {
+    overflow: auto;
+  }
+  .header {
+  background-image: url(../images/header/header-background-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 319px;
+  margin: 0 auto;
+}
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .header {
+    background-image: url(../images/header/header-background-mobile@2x.png);
+  }
+}
+}
+
+/* 480+ mobile */
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    .header {
+      background-image: url(../images/header/header-background-mobile@1x.png);
+      max-width: 767px;
+    }
+  
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      .header {
+        background-image: url(../images/header/header-background-mobile@2x.png);
+      }
+    }
+} 
+
+/* 768+ tablet */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  .header {
+  background-image: url(../images/header/header-background-tablet@1x.png);
+  max-width: 1679px;
+}
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .header {
+    background-image: url(../images/header/header-background-tablet@2x.png);
+  }
+}
+}
+
+/* 1680+ desktop */
+@media screen and (min-width: 1680px) {
+  .container {
+    width: 1680px;
+  }
+    .header {
+      background-image: url(../images/header/header-background-desctop@1x.png);
+      max-width: 1679px;
+    }
+  
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      .header {
+        background-image: url(../images/header/header-background-desctop@2x.png);
+      }
+    }
+}  
+
+/* body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(../images/background-image.jpg);
-  background-size: cover;
-}
+  /* background-image: url(../images/background-image.jpg); */
+  /* background-size: cover; */
+/* } */
 
-a {
+/* a {
   text-decoration: none;
 }
 
@@ -19,15 +108,16 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-}
+}*/
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+/* body {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    margin: 0;
-}
-
+    margin: 0; */
+    /* margin: 0;
+} */
+/* 
 b {
   text-align: center;
   color: #00008b;
@@ -112,6 +202,6 @@ input {
 
 .load-more:hover:after {
   width: 110%;
-}
+}    */
 
 

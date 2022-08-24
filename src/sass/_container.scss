@@ -1,0 +1,33 @@
+// .container {
+//   min-width: 320px;
+//   width: 100vw;
+//   padding-left: 32px;
+//   padding-right: 32px;
+//   overflow-x: none;
+// }
+//0px - 319px mobile
+// @media screen and (max-width: 319px) {
+//   .container {
+//     overflow: auto;
+//   }
+// }
+//480+ mobile
+// @media screen and (min-width: 480px) {
+//   .container {
+//     width: 480px;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+// }
+//768+ tablet
+// @media screen and (min-width: 768px) {
+//   .container {
+//     width: 768px;
+//   }
+// }
+//1680+ desktop
+// @media screen and (min-width: 1680px) {
+//   .container {
+//     width: 1680px;
+//   }
+// }

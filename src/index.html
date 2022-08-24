@@ -4,20 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 11</title>
+    <title>Filmoteka</title>
   </head>
   <body>
-    <form class="search-form" id="search-form">
-      <input
-        type="text"
-        name="searchQuery"
-        autocomplete="off"
-        placeholder="Search images..."
+    <header>
+      <section class = "header container">
+        <!-- <div class="header-container__img">
+            <picture class="header-picture">
+                <source
+                    srcset="./images/header/header-background-desctop@1x.png 1x, ./images/header/header-background-desctop@2x.png 2x"
+                    media="(min-width: 1680px)"
+                />
+                
+                <source
+                    srcset="./images/header/header-background-tablet@1x.png 1x, ./images/header/header-background-tablet@2x.png 2x"
+                    media="(min-width: 768px)"
+                />
+
+                <source
+                    srcset="./images/header/header-background-mobile@1x.png 1x, ./images/header/header-background-mobile@2x.png 2x"
+                    media="(max-width: 767px)"
+                />
+                <img src="./images/header/header-background-desctop@1x.png" alt="abstract-background-with-red-lines">
+            </picture>
+          </div> -->
+        <nav class="navigation">
+          <a class="logo link" href="./index.html" hreflang="en">
+            <svg>
+              <use href="./images/filmoteka.svg"></use>
+            </svg>
+            <span class="logo__text">Filmoteka</span>
+          </a>
+          <form class="movie-search" id="movie-search">
+            <input
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Movie searsh"
       />
-      <button type="submit">Search</button>
     </form>
-    <div class="gallery"></div>
-    <button type="button" class="load-more">Load more</button>
+    <div class="pages"></div>
+          <ul class="pages_list list">
+            <li class="pages_home">
+              <a class="pages_home__link current link" href="./index.html">
+                home
+              </a>
+            </li>
+            <li class="pages_library">
+              <a class="pages_library__link link" href="./library.html">
+                my library
+              </a>
+            </li>
+          </ul>
+        </nav>
+        </ul>
+      </div>
+      
+    </section>
+    </header>
     <script src="index.js" type="module"></script>
   </body>
 </html>
